@@ -35,3 +35,18 @@ Read-only calls: discard/retry permitted. Idempotent metadata writes: retry with
 
 ## Go/no-go
 Production authorization remains NO-GO until all critical tests have independent evidence, human release approval, safe halt, reconciled venue state, rollback, monitoring and restricted credentials.
+
+## Fresh workspace execution checkpoint — 2026-11-03
+
+- Method: GitHub connector read of main, draft PR #1, foundation branch tree and
+  immutable upstream commits. Foundation source: ae0b5f059af8d1f3f7ad0479c4c4bc39f2f76ee3.
+- Local artifact: ops/inventory.json, ops/evidence/, docs/IMPLEMENTATION-PLAN.md
+  and docs/CREDENTIALS.md. Six source candidates observed; compatibility pending.
+- Result: baseline seven tests PASS; added inventory validation tests and CI
+  command. Final local test output is retained in reports/verification.txt.
+- Environment: Python 3.12.14, Docker Compose 2.40.3. Docker server version query
+  denied access to unix:///var/run/docker.sock; runtime validation BLOCKED.
+- No services started, accounts connected, credentials provisioned or orders sent.
+  Production and staging deployment are NOT VERIFIED.
+- Reviewer: pending. Linear P-ESG-1 was not updated in this workspace session;
+  earlier register entries are historical claims, not revalidated here.
