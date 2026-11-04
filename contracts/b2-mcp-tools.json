@@ -1,0 +1,51 @@
+{
+  "schema_version": "0.1",
+  "status": "proposal-not-deployed",
+  "default_mode": "read_only",
+  "tools": [
+    {
+      "name": "b2.check_health",
+      "risk": "read",
+      "description": "Return service health and degraded reasons"
+    },
+    {
+      "name": "b2.list_bots",
+      "risk": "read",
+      "description": "List bot lifecycle state"
+    },
+    {
+      "name": "b2.inspect_gateway",
+      "risk": "read",
+      "description": "Inspect Gateway and RPC health without signing"
+    },
+    {
+      "name": "b2.validate_strategy",
+      "risk": "read",
+      "description": "Validate config and risk limits without execution"
+    },
+    {
+      "name": "b2.propose_deployment",
+      "risk": "review",
+      "description": "Create a change proposal for human review"
+    },
+    {
+      "name": "b2.control_bot",
+      "risk": "privileged",
+      "description": "Request authorized bot lifecycle transition"
+    },
+    {
+      "name": "b2.propose_order",
+      "risk": "approval_required",
+      "description": "Produce an order intent subject to policy and human approval"
+    }
+  ],
+  "requirements": [
+    "authenticated identity",
+    "RBAC",
+    "audit trail",
+    "idempotency",
+    "deny by default",
+    "independent risk enforcement",
+    "no secrets in tool results"
+  ]
+}

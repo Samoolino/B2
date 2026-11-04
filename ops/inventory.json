@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-11-03T15:42:41Z",
+  "foundation": {
+    "repository": "Samoolino/B2",
+    "revision": "ae0b5f059af8d1f3f7ad0479c4c4bc39f2f76ee3",
+    "branch": "feature/b2-operations-foundation"
+  },
+  "installation": "fresh",
+  "telegram_controller": "hummingbot/condor",
+  "mode": "read_only",
+  "live_trading_enabled": false,
+  "sources": [
+    {
+      "component": "hummingbot",
+      "repository": "hummingbot/hummingbot",
+      "revision": "9af100d6822da7d2d0291a906c730ef172284ee2",
+      "evidence_url": "https://github.com/hummingbot/hummingbot/commit/9af100d6822da7d2d0291a906c730ef172284ee2",
+      "status": "observed_candidate",
+      "compatibility": "pending"
+    },
+    {
+      "component": "gateway",
+      "repository": "hummingbot/gateway",
+      "revision": "f23e91670781fba75eb023edecaf2d992f0918aa",
+      "evidence_url": "https://github.com/hummingbot/gateway/commit/f23e91670781fba75eb023edecaf2d992f0918aa",
+      "status": "observed_candidate",
+      "compatibility": "pending"
+    },
+    {
+      "component": "hummingbot-api",
+      "repository": "hummingbot/hummingbot-api",
+      "revision": "7ae108f11bf20651682dbdff639a8717068c5883",
+      "evidence_url": "https://github.com/hummingbot/hummingbot-api/commit/7ae108f11bf20651682dbdff639a8717068c5883",
+      "status": "observed_candidate",
+      "compatibility": "pending"
+    },
+    {
+      "component": "mcp",
+      "repository": "hummingbot/mcp",
+      "revision": "836f9351d48e5c293eaad3ffa16b55fa7bad1a98",
+      "evidence_url": "https://github.com/hummingbot/mcp/commit/836f9351d48e5c293eaad3ffa16b55fa7bad1a98",
+      "status": "observed_candidate",
+      "compatibility": "pending"
+    },
+    {
+      "component": "dashboard",
+      "repository": "hummingbot/dashboard",
+      "revision": "ee42595bec85518eda0b9fe1a56046d09a3e36c6",
+      "evidence_url": "https://github.com/hummingbot/dashboard/commit/ee42595bec85518eda0b9fe1a56046d09a3e36c6",
+      "status": "observed_candidate",
+      "compatibility": "pending"
+    },
+    {
+      "component": "condor",
+      "repository": "hummingbot/condor",
+      "revision": "f825393daa8f98c89ffe9e5708f1b7cefcd37dfc",
+      "evidence_url": "https://github.com/hummingbot/condor/commit/f825393daa8f98c89ffe9e5708f1b7cefcd37dfc",
+      "status": "observed_candidate",
+      "compatibility": "pending"
+    }
+  ],
+  "pending_inventory": [
+    "Select venues, connectors and sandbox/testnet targets",
+    "EMQX immutable image digest and license review",
+    "PostgreSQL immutable image digest and migration compatibility",
+    "Tailscale immutable version and access policy",
+    "Hummingbot, API, Gateway, MCP, Dashboard and Condor image/build digests",
+    "Per-component license review and dependency lock audit"
+  ],
+  "pending_operations": [
+    "Provision isolated persistent non-production host",
+    "Configure server-side secrets, TLS, RBAC/MFA and durable audit",
+    "Implement and test authenticated read-only B2 MCP boundary",
+    "Verify sandbox reconciliation, ownership fencing and halt",
+    "Execute fault injection and backup/restore drills",
+    "Obtain independent release review and explicit production authorization"
+  ]
+}

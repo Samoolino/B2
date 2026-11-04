@@ -17,3 +17,16 @@ Read [the architecture](docs/ARCHITECTURE.md), [operations runbook](docs/OPERATI
 
 ## Non-negotiable
 Do not activate live trading until upstream source/version inventory, test environment, threat model, exchange sandbox tests, formal model checks, fault injection, human authorization and rollback drills are complete.
+
+## Fresh installation checkpoint
+
+See [current progress and outstanding work](docs/PROGRESS.md).
+
+Start with [the ordered implementation plan](docs/IMPLEMENTATION-PLAN.md) and
+[full-stack credential requirements](docs/CREDENTIALS.md). Condor supplies the
+Telegram controller; the legacy Dashboard remains a separate component.
+
+Run `make verify` for offline tests and inventory validation. Run `make preflight`
+to report integration blockers (exit 2 is expected while blocked). Six upstream
+commit candidates are recorded in `ops/inventory.json`; they are not an approved
+compatibility lock. No runtime or credentials have been deployed.
