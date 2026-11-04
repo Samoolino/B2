@@ -19,6 +19,8 @@ mkdir -p ~/code && cd ~/code
 git clone https://github.com/Samoolino/B2.git
 cd B2
 git status --short --branch
+git fetch origin
+git switch --track origin/feature/b2-offline-mcp-wsl-codex
 make verify
 set +e
 make preflight
@@ -50,8 +52,7 @@ Use `codex mcp add` only after this feature branch has been merged or checked ou
 ### Let Codex implement the next stages on a dedicated development branch
 
 ```bash
-git switch main
-git pull --ff-only
+git switch feature/b2-offline-mcp-wsl-codex
 git switch -c feat/runtime-integration
 codex --sandbox workspace-write --ask-for-approval on-request
 ```
